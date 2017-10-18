@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+
+    <title>Todolist</title>
+<style>
+    *{margin: 0;padding: 0;outline:none;}
+    body{background:#F3F2F2;overflow-x:hidden;}
+    .content{background: #2E2E2E}
+    .show{position: relative;left:15%;background:#F3F2F2;width: 30%;width:30%}
+    .late{font-size: 16px ;color:#E98903;font-style:normal;line-height:30px;}
+    .early{font-size: 16px ;color:#2DB611;font-style:normal;line-height:30px}
+    .input{margin:20px 0 10px;width:300px;height:28px;border-radius:5px;text-indent: 10px;border: none;
+       box-shadow:  0 1px 0 rgba(255,255,255,0.24), 0 1px 6px rgba(0,0,0,0.45) inset;}
+    header{position: relative;left:15%;}
+    select,.button{margin:0 7px 10px 0;border-radius:2px;border: none;}
+    button{margin-left:3px;border-radius:2px;border: none;}
+    .box{margin:15px 0;background: #fff;border-radius:4px;height: 30px}
+    .box i{background: url(delete.png) center center;background-size: 20px;float:right;width:20px;height: 20px;
+        display: inline-block;background-repeat: no-repeat;position: relative;top:5px}
+</style>
+</head>
+<body>
+
+    <div class='content'>
+        <header>
+            <input id="input" type="text" class="input"/></br>
+            <select id="year" onchange="match()"></select >
+            <select id="month" onchange="match()"></select>
+            <select id="day"></select>
+            <button onclick='addtodo()' class='button'> &nbsp;Submit&nbsp; </button>
+        </header>   
+    </div>
+    
+    <script>
+        //date
+        var year=document.getElementById('year');
+        var month=document.getElementById('month');
+        var day=document.getElementById('day');
+        var nowYear=new Date().getFullYear()
+        var nowMonth=new Date().getMonth()+1
+        var nowDay=new Date().getDate()
+               
+        //加入option
+        function addOption(text,value,obj){
+            obj.add(new Option(text,value));
+        }
+        for(var i=2017;i<2050;i++){
+        addOption(i,i,year)}
+        for(var i=1;i<13;i++){
+        addOption(i,i,month)}
+            
+        //日月匹配
+        function match(){day.options.length=0;
+            if(month.value==1||month.value==3||month.value==5||month.value==7||month.value==8||month.value==10||month.value==12){for(var i=1;i<=31;i++){addOption(i,i,day)}}
+            else if(month.value==2&&year.value%4==0){for(var i=1;i<=28;i++){addOption(i,i,day)}}
+            else if(month.value==2&&year.value%4!=0){for(var i=1;i<=29;i++){addOption(i,i,day)}}
+            else {for(var i=1;i<=30;i++){addOption(i,i,day)}}
+        }
+        match()
+        
+
+        //add to do
+        var input=document.getElementById('input')
+        var submit=document.getElementsByTagName('button')
+        var showTodo=document.createElement('div')
+        showTodo.className="show"
+        document.body.appendChild(showTodo)
+        
+        
+        function addtodo() {var box=document.createElement('div')
+            box.className='box'
+            showTodo.appendChild(box)
+            var finish=document.createElement('i')
+            //finish.innerHTML='x'
+            finish.onclick=function(){showTodo.removeChild(box);}
+            box.appendChild(finish)
+            var showTodo1=document.createElement('p')
+            
+            if(nowYear ==year.value&&nowMonth >month.value)showTodo1.className='late'
+            else if(nowYear ==year.value&&nowMonth ==month.value&&nowDay >=day.value)showTodo1.className='late'
+            else showTodo1.className='early'
+            showTodo1.innerHTML=year.value+'-'+month.value+'-'+day.value+': '+input.value
+            box.appendChild(showTodo1)
+            input.value=''
+            //编辑文本
+            showTodo1.onclick='event.cancelBubble=true'
+            showTodo1.onclick=function(){
+                var edit = document.createElement('input');
+                edit.className=showTodo1.className
+                edit.value = showTodo1.innerHTML
+                showTodo1.style.display='none'
+                box.appendChild(edit);
+                edit.onblur=function (){
+                    showTodo1.innerHTML=edit.value
+                    edit.style.display='none'
+                    showTodo1.style.display='inline'
+                    box.appendChild(showTodo1);
+                    }
+            }
+            
+        }  
+
+        
+
+    </script>
+</body>
+</html>

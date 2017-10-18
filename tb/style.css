@@ -1,0 +1,122 @@
+body{font-size: 10.5px;
+margin: 0;
+padding: 0;}
+a{text-decoration:none;
+margin-right: 10px}
+.logo{margin: 15px 0 0 75px ;}
+
+.top p{position: absolute;
+top:20px;left:280px;
+text-align: center;
+width: 810px;
+margin: 0 auto;
+background-color: #fef2f2;
+color: #6C6C6C;
+padding:0;
+border: 0.5px solid #ffb4a8;
+line-height:26px; 
+}
+.advice{text-align: right;
+margin-top:-10px;
+margin-right:70px;
+margin-bottom:4px;
+font-size:10.5px}
+.advice a{color: #333;
+line-height:10px;
+display: inline-block;
+vertical-align: middle;
+}
+.advice img{vertical-align:middle}
+
+
+
+.background{
+position: relative;
+background-position: center center;
+height: 600px;
+width: 100%;}
+
+
+.login-box{top: 120px;
+    right: 100px;
+    width: 270px;
+padding: 25px 15px 23px 25px;
+color: #6c6c6c;
+background:rgb(245,234,254);
+position: absolute;
+margin: 0 auto;}
+.login-title{height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #3c3c3c;
+    margin:0 0 10px 0;
+    padding-bottom: 8px;
+    font-weight: 700;}
+.login-form{position: relative;;
+    width: 200px;
+    padding: 10px 8px 10px 30px;
+    border: 1px solid #ddd;}
+
+.username{margin-top:20px;}
+.username i{background:url(img/user.png) no-repeat center center;
+ width:30px;
+ height:37px;   background-size: 37px;
+display: inline-block;
+position: absolute;z-index:3;
+ }
+
+.password{position: relative;
+    margin-top: 20px;
+}
+.password i{background:url(img/pass.png) no-repeat center center;
+width:30px;
+height:37px; background-size: 37px;display: inline-block;
+position: absolute;z-index:3;
+}
+button{
+    margin-top: 20px;
+    width: 260px;
+    height: 42px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #f40;
+
+}
+
+.login-box a{ color:#6c6c6c;
+    margin-right: 10px;
+
+    vertical-align: middle;
+}
+.login-other {
+    vertical-align: middle;
+    margin-top: 15px;
+}
+
+.login-other img{vertical-align: middle}
+.login-other i{display:inline-block;
+background:url(img/weibo.png) no-repeat center center;
+vertical-align: -4px;
+ width:16px;height: 16px;
+background-size: 16px;}
+.forget{    margin-top: 16px;
+    text-align: right;}
+
+
+.footer{position: relative;
+    bottom:0px;
+    left:75px;
+    padding-top:30px ;
+    line-height: 18px;
+    width: 1050px
+}
+.footer a{color:#6c6c6c;
+    margin-right: 10px;
+   }
+.footer span{
+    color: #999;
+}
+.space{margin-left:30px;}
+b{color: #ccc}
