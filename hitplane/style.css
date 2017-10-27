@@ -1,0 +1,106 @@
+
+html,body{height: 100%}
+body{
+    color: #fff;
+    background-image: url(img/bg_1.jpg) ;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+/* index */
+h1{ font-size: 50px;
+    text-shadow: 2px 8px 2px #000;
+}
+#ui-index{
+    display:-webkit-flex;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width:100%;
+}
+.btngroup{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.gameover .btn,.btngroup .btn{
+    width: 140px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    margin-bottom:14px;
+    background: none;
+    font-size:20px;
+    color: #fff;
+}
+
+/* rule & setting*/
+.ui-rule,.ui-setting{
+    display:-webkit-flex;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width:100%
+}
+.ui-box{
+    width:80%;
+    background: #070808;
+    border: 2px solid #ffffff;
+    padding: 14px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing:border-box;
+}
+.ui-box .btn{font-size:18px;
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+}
+.ui-rule,.ui-setting{display: none}
+
+.ui-setting .setting{
+    list-style: none;
+    padding:0;
+}
+
+.ui-setting select{
+    width:100px;
+    background: #fff;
+    margin: 0 0 10px  10px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    border: none;
+}
+
+
+.gameover{
+    display: none;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width:100%;
+}
+
+.Score{
+    color: white;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+}
+
