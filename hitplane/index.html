@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>飞机大作战</title>
+</head>
+<body>
+    <canvas id="game"></canvas>
+    <div id="ui-index">
+        <h1>飞机大作战</h1>
+        <div class="btngroup">
+            <button class="btn">开始游戏</button>
+            <button class="btn">游戏设置</button>
+            <button class="btn">游戏说明</button>
+        </div>
+    </div>
+
+    <div class="ui-setting">
+        <div class="ui-box">
+            <h2>游戏设置</h2>
+            <ul class="setting">
+                <li>
+                    <span>音乐设置</span>
+                    <select>
+                        <option value="on">开启音乐</option>
+                        <option value="off">关闭音乐</option>
+                    </select>
+                </li>
+                <li>
+                    <span>背景设置</span>
+                    <select>
+                        <option value="1">夜袭基地</option>
+                        <option value="2">迷失古迹</option>
+                        <option value="3">原始森林</option>
+                        <option value="4">爆裂火山</option>
+                    </select>
+                </li>
+                <li>
+                    <span>战机设置</span>
+                    <select>
+                        <option value="bluePlaneIcon">蓝色战机</option>
+                        <option value="pinkPlaneIcon">粉色战机</option>
+                    </select>
+                </li>
+            </ul>
+            <button class="btn">确认设置</button>
+        </div>
+    </div>
+
+    <div class="ui-rule">
+        <div class="ui-box">
+            <h2>游戏说明</h2>
+            <p>通过手指移动飞机，躲避敌人，通过子弹射击
+                敌人得分，游戏无限时。消灭小型飞机得100分，
+                消灭大型飞机得1000分。
+            </p>
+            <button class="btn">我明白了</button>
+        </div>
+    </div>
+
+    <div class='gameover'>
+        <button class="btn">重新开始</button>
+        <button class="btn">返回主菜单</button>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/resource.js"></script>
+    <script src="js/element.js"></script>
+    <script src="js/bullet.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/plane.js"></script>
+    <script src="js/js.js"></script>
+</body>
+</html>
